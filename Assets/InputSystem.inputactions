@@ -1,0 +1,64 @@
+{
+    "name": "InputSystem",
+    "maps": [
+        {
+            "name": "BikeVR",
+            "id": "71cb4264-ac94-4bb8-9c29-9e78f870b14f",
+            "actions": [
+                {
+                    "name": "StopMoving",
+                    "type": "Button",
+                    "id": "6ca30876-cc12-4ed0-9817-f29f16ca629e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Stop",
+                    "type": "Button",
+                    "id": "eb803a1c-7ae4-47ce-a5fd-71766929af88",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a99a53b5-522b-45b9-8614-c122588e2095",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Stop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5cf2a0a0-e2b7-4d10-b908-bc6338ff44bf",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "StopMoving",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}

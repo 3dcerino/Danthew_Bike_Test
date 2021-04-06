@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MovementZ : MonoBehaviour
 {
@@ -17,7 +18,6 @@ public class MovementZ : MonoBehaviour
     {
         //
         MoveObject();
-        MyInput();
     }
 
     void MoveObject()
@@ -25,11 +25,12 @@ public class MovementZ : MonoBehaviour
         //transform.Translate(speed * Vector3.right * Time.deltaTime);
         transform.Translate(0, -speed * Time.deltaTime, 0);
     }
-    void MyInput()
+
+    //This function is called when the Space key is pressed:
+    void OnStopMoving()
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            speed = 0;
-        }
+        //Stop the pieces movement by setting speed to 0
+        speed = 0;
+        Debug.Log("Stop");
     }
 }

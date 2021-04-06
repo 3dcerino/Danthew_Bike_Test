@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
     public float speed = 2.5f;
     private Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,6 @@ public class Movement : MonoBehaviour
     {
         //
         MoveObject();
-        MyInput ();
     }
 
     void MoveObject()
@@ -25,11 +26,18 @@ public class Movement : MonoBehaviour
         //transform.Translate(speed * Vector3.right * Time.deltaTime);
         transform.Translate(0, speed * Time.deltaTime, 0);
     }
-    void MyInput()
+
+    //This function is called when the Space key is pressed:
+    void OnStopMoving()
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            speed = 0;
-        }
+        //Stop the pieces movement by setting speed to 0
+        speed = 0;
+        Debug.Log("Stop");
+
+    }
+
+    void OnStop()
+    {
+        Debug.Log("Test");
     }
 }
