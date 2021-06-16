@@ -1,0 +1,3 @@
+* Some directories at the root contain _your_ assets, while some contain third party assets. This can make it difficult at a glance to know which is what for someone new to the project. I recommend either placing all third party assets in a single directory ("External Assets", "Imported", whatever) or placing all _your_ asset directories in a single directory ("Bike Assembly"). I use the latter for my projects.
+* Make sure all assets are in the correctly directories (Bike_Clean_Up, InputSystem are not).
+* I'd put the DANIEL and MATHEW folders in a common directory (Sketchbook, Experiments, whatever).
